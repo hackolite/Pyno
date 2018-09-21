@@ -1,12 +1,15 @@
+import pyglet
 import pyperclip
 
 from element import Element
 from utils import x_y_pan_scale, font
-from draw import *
+from draw import Quad, labelsGroup
 
 
 class Field(Element):
-    # Field is a white box where you can put values
+    '''
+    Field is a white box where you can put values
+    '''
 
     def __init__(self, x, y, batch, code='0', connects=None, size=None):
         Element.__init__(self, x, y, (230, 230, 230), batch)
